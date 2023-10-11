@@ -1,5 +1,5 @@
 //complex.cpp
-#include <iostream> // inout output
+#include <iostream> // input output
 
 using namespace std;
 
@@ -42,7 +42,7 @@ int main(int argc, char const *argv[])
     Complex c(1, 2);
     Complex p(4, 3);
     Complex z = p.add(c);
-    //cout << c.real; // This won't work
+    //cout << c.real; // This won't work because real is a private member variable
     z.print();
     return 0;
 }
