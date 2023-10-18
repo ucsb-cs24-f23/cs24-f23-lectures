@@ -14,6 +14,9 @@ public:
     int successor(int value) const;
     int predecessor(int value) const;
     bool erase(int value);
+    void inorder() const;
+    void preorder() const;
+    void postorder() const;
 
 private:
     class BSTNode{
