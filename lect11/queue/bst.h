@@ -16,7 +16,7 @@ class BST {
     bool insert(int value);     // insert value; return false if duplicate
     bool contains(int value) const;  // true if value is in tree
     void printPreOrder() const; // prints tree data pre-order to cout
-    void printBreadthFirst() const;
+    void printBreadthFirst(vector<int>& v) const;
    
  private:
 

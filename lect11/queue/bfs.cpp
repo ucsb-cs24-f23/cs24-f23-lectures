@@ -17,8 +17,13 @@ int main() {
     b.printPreOrder();
     cout << endl;
     cout << "Traverse bst breadth first"<<endl;
-    b.printBreadthFirst();
-  
+    vector<int> result;
+    b.printBreadthFirst(result);
+    //cout <<endl;
+    for(auto elem: result){
+        cout<< elem << " ";
+    }
+    cout <<endl;
     return 0;
 }
 
