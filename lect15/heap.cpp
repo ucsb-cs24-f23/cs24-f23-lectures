@@ -35,10 +35,32 @@ void selection_sort(vector<int>& v){
         }
     }
 }
+// Running time: O(n^2)
+// Space Complexity: O(1)
 
 void simple_heap_sort(vector<int>& v){
+    priority_queue<int> pq; // max - heap: element at the top is the maximum element 
+    // Operations: top() // max value - O(1)  , 
+    // push(x) - insert x into the pq - O(log n)
+    // pop()  - delete the max value - O(log n)
+    for (auto e : v ){
+        pq.push(e); // upper bounded by  O(log n) - last iteration
+    }
+    // for loop: O(n log n)
+
+    int i = 0;
+    while(!pq.empty()){ // n times
+        v[i] = pq.top(); // O(1)
+        pq.pop(); // O(log n)
+        i++; // O(1)
+    }
+    // while loop - O(n log n)
 
 }
+// overall: running time : O(n log n)
+// Space complexity: O(n)
+
+
 
 int main(int argc, char const *argv[])
 {
@@ -50,7 +72,7 @@ int main(int argc, char const *argv[])
     // }
     cout<<"Before"<<endl;
     visualize(v);
-    selection_sort(v);
+    simple_heap_sort(v);
     cout<<"After sorting"<<endl;
     visualize(v);
 
