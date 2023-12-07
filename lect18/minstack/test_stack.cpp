@@ -7,15 +7,17 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
     vector<int> nums = {1, 2, -3, 4, 5};
-    stack<int> stl_stack;
+    minStack<int> s;
+    cout << "Pushing elements to the min-stack" << endl;
     for(auto elem : nums){
-        stl_stack.push(elem);
+        s.push(elem);
+        cout << "Top: " << s.top() << " Min: " << s.min() << endl;
     }
     //cout << "Top: " << s.top() << endl;
-
-    while(!stl_stack.empty()){
-        cout << "Top: " << stl_stack.top() << endl;
-        stl_stack.pop();
+    cout << "Popping elements from the min-stack" << endl;
+    while(!s.empty()){
+        cout << "Top: " << s.top() << " Min: " << s.min() << endl;
+        s.pop();
     }
 
 }
